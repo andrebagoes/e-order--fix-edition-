@@ -1,0 +1,18 @@
+pblo : 22 ( acc 2 )
+umum : 11 ( acc 1 )
+umum : 33 ( cetak final )
+
+
+umkm = 1
+admin = 2
+ukkp = 3
+uppk = 4
+tiak = 5
+prospek = 6
+kmr = 7
+
+define('KS', true);
+require_once '../fungsi.php'; //14-07-2020
+$chatid = "656180881";
+$text = "Bapak Penyelia, Silahkan cek Permintaan barang yang diajukan unit Bapak :)";
+sendApiMsg($chatid, $text);
