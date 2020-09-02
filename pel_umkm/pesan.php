@@ -16,7 +16,7 @@ $query2 = "DELETE FROM sementara WHERE tgl_permintaan='$tgl'";
 if (mysqli_query($koneksi, $query)) {
 	mysqli_query($koneksi, $query2);
 	header("Location:index.php?p=datapesanan");
-	$chatid = "265744341";
+	$chatid = "656180881";
 	$text = "Hai, ini MumuM ada permintaan barang dari unit anda";
 	sendApiMsg($chatid, $text);
 } else {

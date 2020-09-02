@@ -79,7 +79,7 @@ $tgl = $_GET['tgl'];
     <th rowspan="3"><img src="../gambar/logopemkot.png" style="width:100px;height:100px" /></th>
     <td align="center" style="width: 520px;">
       <font style="font-size: 18px"><b>PT BPD KALTIM KALTARA <br> CABANG TANJUNG SELOR</b></font>
-      <br><br>Jl. Kolonel Sutadji, Tj. Selor Hilir, Tj. Selor, Kabupaten Bulungan, Kalimantan Utara 77216 <br> Telp : (0552) 21340 | Fax : (0552) 21340
+      <br><br>Jl. Kolonel Soetadji, Tj. Selor Hilir, Tj. Selor, Kabupaten Bulungan, Kalimantan Utara 77216 <br> Telp : (0552) 21340 | Fax : (0552) 21340
     </td>
     <th rowspan="3"><img src="../gambar/logopdam.png" style="width:100px;height:80px" /></th>
   </tr>
@@ -87,7 +87,7 @@ $tgl = $_GET['tgl'];
 <hr>
 <p align="center" style="font-weight: bold; font-size: 18px;"><u>BUKTI PERMINTAAN BARANG</u></p>
 <br><br>
-<h4 style="color: black; text-align: center;">Permintaan Barang dari Unit<?= $unit; ?></h4>
+<h4 style="color: black; text-align: center;">Permintaan Barang dari<?= $unit; ?></h4>
 <div class="isi" style="margin: 0 auto;">
   <table class="tabel2">
     <thead>

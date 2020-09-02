@@ -80,7 +80,7 @@
       <!-- body modal -->
       <div class="modal-body">
         <p>1. Unit menginput data permintaan Barang di form permintaan Barang.</p>
-        <p>2. Unit menunggu permintaan di konfirmasi oleh Penyelia SDM & UMUM.</p>
+        <p>2. Unit menunggu permintaan di konfirmasi oleh Penyelia Unit & Penyelia SDM & UMUM.</p>
         <p></p>
       </div>
       <!-- footer modal -->
