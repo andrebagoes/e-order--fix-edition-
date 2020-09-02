@@ -110,7 +110,7 @@ include "../fungsi/fungsi.php";
   </tbody>
 </table>
 
-<div class="kiri">
+<div class="kanan">
   <p>Mengetahui :<br>Penyelia SDM & UMUM</p>
   <br>
   <br>
@@ -118,7 +118,7 @@ include "../fungsi/fungsi.php";
   <p><b><u>Muammer</u><br></b></p>
 </div>
 
-<div class="kanan">
+<div class="kiri">
   <p>Mengetahui :<br>Pemimpin Bidang Layanan & Operasional</p>
   <br>
   <br>
