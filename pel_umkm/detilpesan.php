@@ -42,7 +42,7 @@ if (isset($_GET['aksi']) && isset($_GET['id'])) {
                                     <th>Satuan</th>
                                     <th>Jumlah</th>
                                     <th>Status</th>
-                                    <th>Aksi</th>
+                                    <!--<th>Aksi</th>-->
                                 </tr>
                             </thead>
                             <tbody>

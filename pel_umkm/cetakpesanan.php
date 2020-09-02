@@ -144,17 +144,7 @@ if ($query2) {
 ?>
 
 <div class="kiri">
-  <p>Diminta Oleh :<br>Penyelia </p>
-  <br>
-  <br>
-  <br>
-  <b>
-    <p><u><?= $data['asmen'] ?></u></p>
-  </b>
-</div>
-
-<div class="tengah">
-  <p>Disetujui Oleh :<br>Atasan Langsung </p>
+  <p>Disetujui Oleh :<br>Pemimpin Bidang<br>Layanan & Operasional</p>
   <br>
   <br>
   <br>
@@ -163,13 +153,23 @@ if ($query2) {
   </b>
 </div>
 
-<div class="kanan">
-  <p><br> </p>
+<div class="tengah">
+  <p>Disetujui Oleh :<br>Penyelia SDM & UMUM </p>
   <br>
   <br>
   <br>
   <b>
-    <p><u></u></p>
+    <p><u><?= $data['asmen'] ?></u></p>
+  </b>
+</div>
+
+<div class="kanan">
+  <p>Disetujui Oleh :<br>Penyelia Unit xxx</p>
+  <br>
+  <br>
+  <br>
+  <b>
+    <p>xxx</p>
   </b>
 </div>
 

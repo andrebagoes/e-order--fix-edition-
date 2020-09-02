@@ -86,17 +86,17 @@ $data = mysqli_fetch_assoc($query);
               </span>
             </a>
             <ul class="treeview-menu">
-              <li><a href="index.php?p=material&id_jenis=1"><i class="fa fa-circle-o"></i>Barang 1</a></li>
-              <li><a href="index.php?p=material&id_jenis=2"><i class="fa fa-circle-o"></i>Barang 2</a></li>
-              <li><a href="index.php?p=material&id_jenis=3"><i class="fa fa-circle-o"></i>Barang 3</a></li>
+              <li><a href="index.php?p=material&id_jenis=1"><i class="fa fa-circle-o"></i>Barang Cetakan</a></li>
+              <li><a href="index.php?p=material&id_jenis=2"><i class="fa fa-circle-o"></i>Barang Non Cetakan</a></li>
+            <!-- <li><a href="index.php?p=material&id_jenis=3"><i class="fa fa-circle-o"></i>Barang 3</a></li>
               <li><a href="index.php?p=material&id_jenis=4"><i class="fa fa-circle-o"></i>Barang 4</a></li>
               <li><a href="index.php?p=material&id_jenis=5"><i class="fa fa-circle-o"></i>Barang 5</a></li>
               <li><a href="index.php?p=material&id_jenis=6"><i class="fa fa-circle-o"></i>Barang 6</a></li>
-              <li><a href="index.php?p=material&id_jenis=7"><i class="fa fa-circle-o"></i>Barang 7</a></li>
+              <li><a href="index.php?p=material&id_jenis=7"><i class="fa fa-circle-o"></i>Barang 7</a></li> -->
             </ul>
           </li>
           <li><a href="index.php?p=datapesanan"><i class="fa fa-files-o"></i> Data Permintaan Barang</a></li>
-         <a href="index.php?p=cetakpesanan"><i class="fa fa-print"></i> Cetak Form Pemesanan</a></li>
+          <li><a href="index.php?p=cetakpesanan"><i class="fa fa-print"></i> Cetak Form Pemesanan</a></li>
           <li><a href="../logout.php"><i class="fa fa-sign-out"></i> <span>Logout</span></a></li>
         </ul>
       </section>
@@ -110,7 +110,7 @@ $data = mysqli_fetch_assoc($query);
     </div>
 
     <footer class="main-footer">
-      <marquee hspace="40" width="full-width">Setelah permintaan di konfirmasi, akan otomatis diteruskan ke PBLO</marquee>
+      <marquee hspace="40" width="full-width">Setelah permintaan di konfirmasi, akan otomatis diteruskan </marquee>
       <strong>Copyright &copy; Github God </strong>
     </footer>
 
