@@ -143,7 +143,7 @@ if ($query2) {
 }
 ?>
 
-<div class="kiri">
+<div class="tengah">
   <p>Diminta Oleh :<br>Penyelia </p>
   <br>
   <br>
@@ -153,7 +153,7 @@ if ($query2) {
   </b>
 </div>
 
-<div class="tengah">
+<div class="kiri">
   <p>Disetujui Oleh :<br>Pemimpin Bidang Layanan & Operasional </p>
   <br>
   <br>

@@ -47,8 +47,8 @@ if (isset($_GET['id_jenis'])) {
                                     <th>Nama Barang</th>
                                     <th>Satuan</th>
                                     <th>Stok Awal</th>
-                                    <th>Keluar</th>
-                                    <th>Sisa</th>
+                                    <th>Stock Keluar</th>
+                                    <th>Stock Tersedia</th>
                                 </tr>
                             </thead>
                             <tbody>

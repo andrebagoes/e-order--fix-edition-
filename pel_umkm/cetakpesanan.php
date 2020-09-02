@@ -87,7 +87,7 @@ $tgl = $_GET['tgl'];
 <hr>
 <p align="center" style="font-weight: bold; font-size: 18px;"><u>BUKTI PERMINTAAN BARANG</u></p>
 <br><br>
-<h4 style="color: black; text-align: center;">Permintaan Barang dari<?= $unit; ?></h4>
+<h4 style="color: black; text-align: center;">Permintaan Barang dari <?= $unit; ?></h4>
 <div class="isi" style="margin: 0 auto;">
   <table class="tabel2">
     <thead>
@@ -96,7 +96,7 @@ $tgl = $_GET['tgl'];
         <td style="text-align: center; "><b>Kode Barang</b></td>
         <td style="text-align: center; "><b>Nama Barang</b></td>
         <td style="text-align: center; "><b>Satuan</b></td>
-        <td style="text-align: center; "><b>Harga</b></td>
+        <!-- <td style="text-align: center; "><b>Harga</b></td> -->
         <td style="text-align: center; "><b>Jumlah</b></td>
       </tr>
     </thead>
@@ -113,7 +113,7 @@ $tgl = $_GET['tgl'];
           <td style="text-align: center;"><?php echo $data['kode_brg']; ?></td>
           <td style="text-align: center;"><?php echo $data['nama_brg']; ?></td>
           <td style="text-align: center;"><?php echo $data['satuan']; ?></td>
-          <td style="text-align: center;"><?php echo $data['harga_item']; ?></td>
+           <!--<td style="text-align: center;"><?php echo $data['harga_item']; ?></td> -->
           <td style="text-align: center;"><?php echo $data['jumlah']; ?></td>
         </tr>
       <?php

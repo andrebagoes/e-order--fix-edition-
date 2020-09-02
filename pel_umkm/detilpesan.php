@@ -76,7 +76,7 @@ if (isset($_GET['aksi']) && isset($_GET['id'])) {
                                             </td>
                                             <td>
 
-                                                <a href="?p=detil&aksi=hapus&id=<?= $row['id_permintaan']; ?>&tgl=<?= $tgl; ?>"><span data-placement='top' data-toggle='tooltip' title='Hapus'><button class="btn btn-danger" onclick="return confirm('Yakin ingin menghapus ?')">Hapus</button></span></a>
+                                               <!-- <a href="?p=detil&aksi=hapus&id=<?= $row['id_permintaan']; ?>&tgl=<?= $tgl; ?>"><span data-placement='top' data-toggle='tooltip' title='Hapus'><button class="btn btn-danger" onclick="return confirm('Yakin ingin menghapus ?')">Hapus</button></span></a> -->
 
                                             </td>
 

@@ -87,7 +87,7 @@ $tgl = $_GET['tgl'];
 <hr>
 <p align="center" style="font-weight: bold; font-size: 18px;"><u>BUKTI PERMINTAAN BARANG</u></p>
 <br><br>
-<h4 style="color: black; text-align: center;">Permintaan Barang dari Unit<?= $unit; ?></h4>
+<h4 style="color: black; text-align: center;">Hasil Permintaan Barang dari Unit <?= $unit; ?></h4>
 <div class="isi" style="margin: 0 auto;">
   <table class="tabel2">
     <thead>
@@ -96,7 +96,7 @@ $tgl = $_GET['tgl'];
         <td style="text-align: center; "><b>Kode Barang</b></td>
         <td style="text-align: center; "><b>Nama Barang</b></td>
         <td style="text-align: center; "><b>Satuan</b></td>
-        <td style="text-align: center; "><b>Harga</b></td>
+        <td style="text-align: center; "><b>Harga Barang</b></td>
         <td style="text-align: center; "><b>Jumlah</b></td>
       </tr>
     </thead>
@@ -129,7 +129,7 @@ $tgl = $_GET['tgl'];
 
   ?>
 
-  <p>Pada hari ini tanggal : <b> <?= tanggal_indo($tgl); ?></b> telah diminta barang seperti yang tersebut di atas.</p>
+  <p>Pada hari ini tanggal : <b> <?= tanggal_indo($tgl); ?></b> telah disetujui barang seperti yang tersebut di atas.</p>
   <p>Keterangan : <?php echo $data2['nama_tukang']; ?></p>
 </div>
 
@@ -143,8 +143,8 @@ if ($query2) {
 }
 ?>
 
-<div class="kiri">
-  <p>Diminta Oleh :<br>Penyelia </p>
+<div class="kanan">
+  <p>Disetujui oleh :<br>Penyelia SDM & UMUM</p>
   <br>
   <br>
   <br>
@@ -153,8 +153,8 @@ if ($query2) {
   </b>
 </div>
 
-<div class="tengah">
-  <p>Disetujui Oleh :<br>Pemimpin Bidang Layanan & Operasional </p>
+<div class="kiri">
+  <p>Disetujui Oleh :<br>Pemimpin Bidang <br> Layanan & Operasional </p>
   <br>
   <br>
   <br>

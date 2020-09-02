@@ -16,7 +16,7 @@ if (isset($_GET['aksi']) && isset($_GET['id'])) {
 }
 
 
-$query = mysqli_query($koneksi, "SELECT permintaan.id_permintaan, permintaan.kode_brg, tgl_permintaan, unit, nama_brg, jumlah, satuan,  status FROM permintaan INNER JOIN stokbarang ON permintaan.kode_brg = stokbarang.kode_brg WHERE status=1 ORDER BY tgl_permintaan DESC ");
+$query = mysqli_query($koneksi, "SELECT permintaan.id_permintaan, permintaan.kode_brg, tgl_permintaan, unit, nama_brg, jumlah, satuan,  status FROM permintaan INNER JOIN stokbarang ON permintaan.kode_brg = stokbarang.kode_brg WHERE status !=99 ORDER BY tgl_permintaan DESC ");
 
 
 ?>
@@ -31,8 +31,8 @@ $query = mysqli_query($koneksi, "SELECT permintaan.id_permintaan, permintaan.kod
                     <h3 class="text-center">Data Pengeluaran Barang</h3>
                 </div>
                 <div class="box-body">
-                    <a href="cetakbarang.php" target="_blank" style="margin:10px;" class="btn btn-success"><i class='fa fa-print'> Cetak Laporan</i></a>
-                    <div class="table-responsive">
+                   <!-- <a href="cetakbarang.php" target="_blank" style="margin:10px;" class="btn btn-success"><i class='fa fa-print'> Cetak Laporan</i></a> -->
+                    <div class="table-responsive">  
                         <table class="table table-bordered table-hover text-center" id="datapesanan">
                             <thead>
                                 <tr>
@@ -43,7 +43,7 @@ $query = mysqli_query($koneksi, "SELECT permintaan.id_permintaan, permintaan.kod
                                     <th>Satuan</th>
                                     <th>Jumlah</th>
                                     <th>Status</th>
-                                    <th>Aksi</th>
+                                   <!-- <th>Aksi</th> -->
                                 </tr>
                             </thead>
                             <tbody>

@@ -111,20 +111,26 @@ include "../fungsi/fungsi.php";
 </table>
 
 <div class="kiri">
-  <p>Mengetahui :<br>Penyelia SDM & UMUM</p>
+  <p>Mengetahui :<br>Pemimpin Bidang <br> Layanan & Operasional</p>
+  <br>
+  <br>
+  <br>
+  <p><b><u>Wahyu Winarti</u><br></b></p>
+</div>
+
+<div class="kanan">
+<p>Disetujui Oleh :<br>Penyelia <br> SDM & UMUM</p>
   <br>
   <br>
   <br>
   <p><b><u>Muammer</u><br></b></p>
 </div>
 
-<div class="kanan">
-  <p>Mengetahui :<br>Pemimpin Bidang Layanan & Operasional</p>
-  <br>
-  <br>
-  <br>
-  <p><b><u>Wahyu Winarti</u><br></b></p>
-</div>
+
+
+
+
+
 
 <!-- Memanggil fungsi bawaan HTML2PDF -->
 <?php
