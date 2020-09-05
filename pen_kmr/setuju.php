@@ -1,0 +1,36 @@
+<?php
+require_once "cek_asmen.php";
+include "../fungsi/koneksi.php";
+
+define('KS', true);
+require_once '../fungsi.php'; //14-07-2020
+
+if (isset($_GET['id'])) {
+	$id = $_GET['id'];
+	$tanggal = date('Y-m-d');
+
+	//$query1 = mysqli_query($koneksi, "UPDATE permintaan SET status=7 WHERE id_permintaan='$id' ");
+
+	//$query2 = mysqli_query($koneksi, "SELECT * FROM permintaan WHERE id_permintaan='$id'");
+
+	//$row = mysqli_fetch_assoc($query2);
+
+	//$query3 = mysqli_query($koneksi, "INSERT INTO pengeluaran (unit, kode_brg, jumlah, tgl_keluar)
+	//										VALUES ('$row[unit]', '$row[kode_brg]', '$row[jumlah]', '$tanggal' ) ");
+
+	$query1 = mysqli_query($koneksi, "UPDATE permintaan SET status=11 WHERE id_permintaan='$id' ");
+
+	if ($query1) { 
+	header("location:index.php?p=datapesanan");
+	$chatid = "459128186";
+	$text = "Hai, ini MumuM ada permintaan barang hari ini, Tolong dicek di aplikasi e-Order ya";
+	sendApiMsg($chatid, $text);
+
+    } else {
+		echo "ada yang salah" . mysqli_error($koneksi);
+	}
+}
+?>
+
+
+

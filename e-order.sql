@@ -1,15 +1,13 @@
 -- phpMyAdmin SQL Dump
--- version 4.8.5
--- https://www.phpmyadmin.net/
+-- version 4.5.1
+-- http://www.phpmyadmin.net
 --
 -- Host: 127.0.0.1
--- Generation Time: Aug 31, 2020 at 07:32 PM
--- Server version: 10.1.38-MariaDB
--- PHP Version: 5.6.40
+-- Generation Time: Sep 02, 2020 at 05:58 PM
+-- Server version: 10.1.13-MariaDB
+-- PHP Version: 5.6.20
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
-SET AUTOCOMMIT = 0;
-START TRANSACTION;
 SET time_zone = "+00:00";
 
 
@@ -38,13 +36,8 @@ CREATE TABLE `jenis_barang` (
 --
 
 INSERT INTO `jenis_barang` (`id_jenis`, `jenis_brg`) VALUES
-('1', 'Barang1'),
-('2', 'Barang2'),
-('3', 'Barang3'),
-('4', 'Barang4'),
-('5', 'Barang5'),
-('6', 'Barang6'),
-('7', 'Barang7');
+('1', 'Barang Cetakan'),
+('2', 'Barang Non Cetakan');
 
 -- --------------------------------------------------------
 
@@ -59,16 +52,6 @@ CREATE TABLE `pengeluaran` (
   `jumlah` int(11) NOT NULL,
   `tgl_keluar` date NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
-
---
--- Dumping data for table `pengeluaran`
---
-
-INSERT INTO `pengeluaran` (`id`, `unit`, `kode_brg`, `jumlah`, `tgl_keluar`) VALUES
-(2, 'pel_umkm', 'BR002', 3, '2020-08-09'),
-(3, 'pel_umkm', 'BR002', 3, '2020-08-11'),
-(4, 'pel_umkm', 'BR002', 6, '2020-08-11'),
-(5, 'pel_umkm', 'BR002', 3, '2020-08-26');
 
 --
 -- Triggers `pengeluaran`
@@ -101,15 +84,6 @@ CREATE TABLE `permintaan` (
   `nama_tukang` varchar(20) NOT NULL,
   `status` int(11) NOT NULL
 ) ENGINE=MyISAM DEFAULT CHARSET=latin1;
-
---
--- Dumping data for table `permintaan`
---
-
-INSERT INTO `permintaan` (`id_permintaan`, `unit`, `kode_brg`, `id_jenis`, `jumlah`, `tgl_permintaan`, `nama_tukang`, `status`) VALUES
-(44, 'pel_umkm', 'BR002', 1, 3, '2020-08-11', 'Permintaan karton un', 1),
-(45, 'pel_umkm', 'BR002', 1, 6, '2020-08-11', 'Permintaan karton un', 1),
-(46, 'pel_umkm', 'BR002', 1, 3, '2020-08-26', 'Untuk Unit UMKM ( Na', 33);
 
 -- --------------------------------------------------------
 
@@ -147,13 +121,6 @@ CREATE TABLE `stokbarang` (
   `suplier` varchar(20) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
---
--- Dumping data for table `stokbarang`
---
-
-INSERT INTO `stokbarang` (`kode_brg`, `id_jenis`, `nama_brg`, `satuan`, `harga_item`, `stok`, `keluar`, `sisa`, `tgl_masuk`, `suplier`) VALUES
-('BR002', 1, 'Kertas Karton', 'Roll', 12000, 20, 12, 8, '2020-07-02', 'Harapan teguh');
-
 -- --------------------------------------------------------
 
 --
@@ -164,7 +131,7 @@ CREATE TABLE `user` (
   `id_user` int(11) NOT NULL,
   `username` varchar(20) NOT NULL,
   `password` varchar(255) NOT NULL,
-  `level` enum('pen_sdm&umum','pen_umkm','pen_admin','pen_uppk','pen_ukkp','pen_tiak','pen_prospek','pen_kmr','pel_umum','pel_umkm','Pel_admin','pel_ukkp','pel_uppk','pel_prospek','pel_tiak','pel_kmr','pblo_pblo') NOT NULL,
+  `level` enum('pen_sdm&umum','pen_umkm','pen_admin','pen_uppk','pen_ukkp','pen_tiak','pen_prospek','pen_kmr','pel_umum','pel_umkm','pel_admin','pel_ukkp','pel_uppk','pel_prospek','pel_tiak','pel_kmr','pblo_pblo','pel_layanan','pen_layanan','pel_umum2') NOT NULL,
   `manajer` varchar(50) NOT NULL,
   `asmen` varchar(50) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
@@ -174,12 +141,26 @@ CREATE TABLE `user` (
 --
 
 INSERT INTO `user` (`id_user`, `username`, `password`, `level`, `manajer`, `asmen`) VALUES
-(15, 'pel_umum', '827ccb0eea8a706c4c34a16891f84e7b', 'pel_umum', 'A', 'B'),
-(18, 'pen_sdm&umum', '827ccb0eea8a706c4c34a16891f84e7b', 'pen_sdm&umum', 'A', 'B'),
-(19, 'pel_umkm', '827ccb0eea8a706c4c34a16891f84e7b', 'pel_umkm', 'A', 'B'),
-(20, 'pen_umkm', '827ccb0eea8a706c4c34a16891f84e7b', 'pen_umkm', 'A', 'B'),
-(21, 'pel_admin', '827ccb0eea8a706c4c34a16891f84e7b', 'Pel_admin', 'A', 'B'),
-(23, 'pblo', '827ccb0eea8a706c4c34a16891f84e7b', 'pblo_pblo', 'A', 'B');
+(15, 'pel_umum', '827ccb0eea8a706c4c34a16891f84e7b', 'pel_umum', 'Wahyu Winarti', 'Muammer'),
+(18, 'pen_sdm&umum', '827ccb0eea8a706c4c34a16891f84e7b', 'pen_sdm&umum', 'Wahyu Winarti', 'Muammer'),
+(19, 'pel_umkm', '827ccb0eea8a706c4c34a16891f84e7b', 'pel_umkm', 'Wahyu Winarti', 'Muammer'),
+(20, 'pen_umkm', '827ccb0eea8a706c4c34a16891f84e7b', 'pen_umkm', 'Wahyu Winarti', 'Muammer'),
+(23, 'pblo', '827ccb0eea8a706c4c34a16891f84e7b', 'pblo_pblo', 'Wahyu Winarti', 'Muammer'),
+(24, 'pen_admin', '827ccb0eea8a706c4c34a16891f84e7b', 'pen_admin', 'Wahyu Winarti', 'Muammer'),
+(25, 'pel_admin', '827ccb0eea8a706c4c34a16891f84e7b', 'pel_admin', 'Wahyu Winarti', 'Muammer'),
+(26, 'pel_uppk', '827ccb0eea8a706c4c34a16891f84e7b', 'pel_uppk', 'Wahyu Winarti', 'Muammer'),
+(27, 'pen_uppk', '827ccb0eea8a706c4c34a16891f84e7b', 'pen_uppk', 'Wahyu Winarti', 'Muammer'),
+(28, 'pen_prospek', '827ccb0eea8a706c4c34a16891f84e7b', 'pen_prospek', 'Wahyu Winarti', 'Muammer'),
+(29, 'pel_prospek', '827ccb0eea8a706c4c34a16891f84e7b', 'pel_prospek', 'Wahyu Winarti', 'Muammer'),
+(30, 'pel_tiak', '827ccb0eea8a706c4c34a16891f84e7b', 'pel_tiak', 'Wahyu Winarti', 'Muammer'),
+(31, 'pen_tiak', '827ccb0eea8a706c4c34a16891f84e7b', 'pen_tiak', 'Wahyu Winarti', 'Muammer'),
+(32, 'pen_layanan', '827ccb0eea8a706c4c34a16891f84e7b', 'pen_layanan', 'Wahyu Winarti', 'Muammer'),
+(33, 'pel_layanan', '827ccb0eea8a706c4c34a16891f84e7b', 'pel_layanan', 'Wahyu Winarti', 'Muammer'),
+(34, 'pel_ukkp', '827ccb0eea8a706c4c34a16891f84e7b', 'pel_ukkp', 'Wahyu Winarti', 'Muammer'),
+(35, 'pen_ukkp', '827ccb0eea8a706c4c34a16891f84e7b', 'pen_ukkp', 'Wahyu Winarti', 'Muammer'),
+(36, 'pel_kmr', '827ccb0eea8a706c4c34a16891f84e7b', 'pel_kmr', 'Wahyu Winarti', 'Muammer'),
+(37, 'pen_kmr', '827ccb0eea8a706c4c34a16891f84e7b', 'pen_kmr', 'Wahyu Winarti', 'Muammer'),
+(38, 'pel_umum2', '827ccb0eea8a706c4c34a16891f84e7b', 'pel_umum2', 'Wahyu Winarti', 'Muammer');
 
 --
 -- Indexes for dumped tables
@@ -229,27 +210,22 @@ ALTER TABLE `user`
 -- AUTO_INCREMENT for table `pengeluaran`
 --
 ALTER TABLE `pengeluaran`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
-
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=7;
 --
 -- AUTO_INCREMENT for table `permintaan`
 --
 ALTER TABLE `permintaan`
-  MODIFY `id_permintaan` int(100) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=47;
-
+  MODIFY `id_permintaan` int(100) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=53;
 --
 -- AUTO_INCREMENT for table `sementara`
 --
 ALTER TABLE `sementara`
-  MODIFY `id_sementara` int(100) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=47;
-
+  MODIFY `id_sementara` int(100) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=53;
 --
 -- AUTO_INCREMENT for table `user`
 --
 ALTER TABLE `user`
-  MODIFY `id_user` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=24;
-COMMIT;
-
+  MODIFY `id_user` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=39;
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
 /*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
