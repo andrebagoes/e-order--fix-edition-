@@ -1,4 +1,4 @@
-Aplikasi Permintaan dan Pengeluaran Barang pilot project pcp3 Bankaltimtara Cabang Tanjung Selor
+Aplikasi Permintaan dan Pengeluaran Barang pilot project pcp3
 =========
 
 Penjelasan
